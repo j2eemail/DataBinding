@@ -1,0 +1,27 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="includeModel"
+            type="com.lxs.databinding.model.IncludeModel"></variable>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            bind:titleModel="@{includeModel.titleModel}"
+            layout="@layout/title"></include>
+        <!--    bind:titleModel的 titleModel为include引用布局中的Model名称传入对应的Model对象   -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{includeModel.content}" />
+    </LinearLayout>
+</layout>

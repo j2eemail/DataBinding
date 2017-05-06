@@ -1,0 +1,58 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="observableModel"
+            type="com.lxs.databinding.model.ObservableModel"></variable>
+
+        <variable
+            name="observableListener"
+            type="com.lxs.databinding.view.ObservableActivity.ObservableListener"></variable>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/ovservable_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/ovservable_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{observableModel.txt}" />
+
+        <TextView
+            android:id="@+id/ovservable_txt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{observableModel.txt1}" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{observableListener.onClick}"
+            android:text="修改第一个文本" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{observableListener.onClick}"
+            android:text="修改第二个文本" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{observableListener.onClick}"
+            android:text="全部修改" />
+
+    </LinearLayout>
+</layout>
